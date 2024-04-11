@@ -5,9 +5,9 @@ import post5 from '../assets/Img-5.png'
 
 const PostDetail = () => {
   return (
-        <section className='post-detail w-[70%] m-auto bg-purple-200 p-[2rem]'>
-            <div className='container post-detail_container'>
-                <div className='post-detail_header flex justify-between mb-[1.5rem]'>
+        <section className='w-[70%] m-auto bg-purple-200 p-[2rem]'>
+            <div className='container post-detail_container p-[2rem] inline-block m-auto'>
+                <div className='flex justify-between mb-[1.5rem]'>
                     <PostAuthor/>
                     <div className='post-detail_button items-center gap-[2rem] mb-[1.5rem]'>
                         <Link to={`/posts/10/edit`} className='px-4 rounded-md mt-5 py-1 bg-green-500 text-white'>Edit</Link>
@@ -15,8 +15,8 @@ const PostDetail = () => {
                     </div>
                 </div>
                 <h1>the post that will change your life</h1>
-                <div className='post-detail_thumbnail mx-[1rem] my-0 h-fit overflow-hidden max-h-[30rem]'>
-                    <img src={post5} alt=" " />
+                <div className='p-[2rem] mx-[1rem] my-0 h-fit overflow-hidden max-h-[30rem]'>
+                    <img src={post5} className='overflow-hidden' alt=" " />
                 </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eaque tempore ipsa commodi omnis assumenda deleniti dicta mollitia aperiam deserunt voluptas fugiat aliquid, tempora veritatis ullam expedita est sapiente velit explicabo inventore quia. Aliquid suscipit consequuntur aliquam quod sapiente. Fuga esse veniam quidem reiciendis error dignissimos aliquam, atque placeat et?

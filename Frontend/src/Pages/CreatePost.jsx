@@ -29,20 +29,20 @@ const CreatePost = () => {
     const POST_CATEGORIES =["Agriculture","Business","Art","Education","Entertainment","Scince","Technology","Sport","General","Finaical"]
 
   return (
-    <section className=''>
+    <section className='w-[80%] m-auto grid place-items-center h-[100vh]'>
         <div className=''>
-            <h2>Create Post</h2>
-            <p className=''> Post Error</p>
+            <h2 className='text-[25px] font-bold'>Create Post</h2>
+            <p className='bg-red-500 text-white text-[15px] rounded-[5px] w-[100%] px-2 p-1 mt-3'> Post Error</p>
             <form className=''>
-                <input type="text" placeholder='Title' value={title} onChange={e=> setTitle(e.target.value)} autoFocus required />
-                <select name="category" value={category} onChange={e=> setCategory(e.target.value)}>\
+                <input className='w-[100%] bg-gray-100 mt-5 px-2 p-1' type="text" placeholder='Title' value={title} onChange={e=> setTitle(e.target.value)} autoFocus required />
+                <select className='w-[100%] bg-gray-100 mt-5 px-2 p-1 mb-5' name="category" value={category} onChange={e=> setCategory(e.target.value)}>\
                     {
                         POST_CATEGORIES.map(cat => <option key={cat}>{cat}</option>)
                     }
                 </select>
-                <ReactQuill modules={modules} formats={formats} value ={description} onChange={setDescription}/>
+                <ReactQuill className='h-[15rem] overflow-scroll mb-10' modules={modules} formats={formats} value ={description} onChange={setDescription}/>
                 <input type="file" value={thumbnail} onChange={e=> setThumbnail(e.target.files[0])}  accept='jpg,png,jpeg'/>
-                <button type='submit' className=''> Create Post</button>
+                <button type='submit' className='px-1 rounded-md mt-5 py-1 bg-purple-400 text-white'>Create Post</button>
             </form>
         </div>
     </section>

@@ -14,22 +14,22 @@ const authorsData = [
 const Author = () => {
     const [authors, setAuthors] = useState(authorsData)
   return (
-        <section className=''>
-            {authors.length > 0 ? <div className=''>
+        <section className='bg-white mx-10'>
+            {authors.length > 0 ? <div className='grid grid-cols-2 gap-x-2 md:grid-cols-3 lg:grid-cols-4'>
                 {
                     authors.map(({id, avater, name, posts}) => {
-                        return <Link key={id}to ={`/posts/users/${id}`} className=''>
-                            <div className=''>
+                        return <Link key={id}to ={`/posts/users/${id}`} className='flex gap-2 mb-5 mt-5 bg-gray-100 border-gray-400 border-2 rounded-xl p-2 hover:shadow-lg'>
+                            <div className='w-[5rem] h-[5rem] rounded-full overflow-hidden border-orange-400 border-4 aspect-w-1 aspect-h-1'>
                                 <img src={avater} alt={`image of ${name}`} />
                             </div>
-                            <div className=''>
+                            <div className='mt-[1rem] font-semibold'>
                                 <h4>{name}</h4>
                                 <p>{posts}</p>
                             </div>
                         </Link>
                     })
                 }
-            </div> : <h2 className=''>No Authors Found</h2>}
+            </div> : <h2 className='items-center text-center'>No Authors Found</h2>}
         </section>
     
   )

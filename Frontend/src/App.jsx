@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './Component/Layout';
@@ -18,8 +19,6 @@ import LandingPage from './Pages/LandingPage';
 
 
 
-
-
 const router = createBrowserRouter([
   {
 
@@ -28,19 +27,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {index: true, element: <LandingPage/>},
-      {index: "home", element: <Home/>},
-      {path: "posts/:id", element: <PostDetail/> },
+      {path: "landingpage", element: <LandingPage/> },
       {path: "login", element: <LoginPage/> },
       {path: "register", element: <RegisterPage/> },
+      {path: "home", element: <Home/> },
+      {path: "posts/:id", element: <PostDetail/> },
       {path: "profile/:id", element: <UserProfile/> },
       {path: "author", element: <Author/> },
       {path: "create", element: <CreatePost/> },
-      {path: "posts/:id/edit", element: <EditPost/> },
-      {path: "posts/:id/delete", element: <DeletePost/> },
+      {path: "posts/:id/edit", element: <EditPost/>},
       {path: "myposts/:id", element: <Dashboard/> },
       {path: "posts/users/:id", element: <AuthorPost/> },
       {path: "posts/categories/category", element: <CategoryPost/> },
-
     ]
   }
 ])
@@ -51,5 +49,6 @@ root.render(
     <RouterProvider router = {router}/>
   </React.StrictMode>
 );
+
 
 
